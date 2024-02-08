@@ -1,0 +1,2 @@
+helm:
+  chart: git::http://github.com/rancher/fleet-examples//single-cluster/helm 
