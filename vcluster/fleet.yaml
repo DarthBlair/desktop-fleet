@@ -8,11 +8,14 @@
 #   --namespace vcluster-my-vcluster \
 #   --repository-config=''
 
-defaultNamespace: vcluster-my-vcluster
-helm:
-  releaseName: vcluster01
-  repo: https://charts.loft.sh
-  chart: vcluster
-  values:
-    vcluster:
-      image: rancher/k3s:v1.27.10-k3s2
+targetCustomizations:
+- name: desktop
+  clusterName: desktop
+  defaultNamespace: vcluster-my-vcluster
+  helm:
+    releaseName: vcluster01
+    repo: https://charts.loft.sh
+    chart: vcluster
+    values:
+      vcluster:
+        image: rancher/k3s:v1.27.10-k3s2
